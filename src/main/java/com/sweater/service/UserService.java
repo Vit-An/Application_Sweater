@@ -1,8 +1,8 @@
-package com.exemple.sweater.service;
+package com.sweater.service;
 
-import com.exemple.sweater.domain.Role;
-import com.exemple.sweater.domain.User;
-import com.exemple.sweater.repos.UserRepo;
+import com.sweater.model.Role;
+import com.sweater.model.User;
+import com.sweater.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -44,7 +44,7 @@ public class UserService implements UserDetailsService {
         if(!StringUtils.isEmpty(user.getEmail())){
 
             String message = String.format(
-                    "Hallo, %s! \n" +
+                    "Hello, %s! \n" +
                             "Welcome to Sweater. Please, visit next link: http://localhost:8080/activate/%s",
                     user.getUsername(),
                     user.getActivationCode()

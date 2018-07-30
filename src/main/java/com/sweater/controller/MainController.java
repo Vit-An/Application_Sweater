@@ -1,9 +1,8 @@
-package com.exemple.sweater.controller;
+package com.sweater.controller;
 
-import com.exemple.sweater.domain.Message;
-import com.exemple.sweater.domain.User;
-import com.exemple.sweater.repos.MessageRepo;
-import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.sweater.model.Message;
+import com.sweater.model.User;
+import com.sweater.repos.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.jws.WebParam;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -79,6 +77,4 @@ public class MainController {
         model.put("messages", messages);
         return "main";
     }
-
-
 }
