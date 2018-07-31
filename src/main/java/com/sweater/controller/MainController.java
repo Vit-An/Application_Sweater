@@ -25,7 +25,7 @@ public class MainController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @Value("${upload.path}")//шукає шлях ї в вставляє в змінну нижче
+    @Value("${upload.path}")
     private String uploadPath;
 
     @GetMapping("/")
